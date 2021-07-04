@@ -1,0 +1,56 @@
+.dashboard {
+  margin: 0 auto;
+  background-color: antiquewhite;
+  border-radius: .5rem;
+  padding: 1rem;
+
+  .set-name {
+    width: max-content;
+    position: relative;
+    label {
+      display: block;
+      flex-grow: 1;
+    }
+    input {
+      border: 1px solid gray;
+      border-radius: .25rem;
+      padding: .25rem;
+    }
+    button {
+      margin-left: .25rem;
+      outline: none;
+      border: 1px solid gray;
+      border-radius: .25rem;
+      padding: .25rem;
+      background-color: white;
+    }
+  }
+
+  .rooms {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &.disabled {
+      margin-top: .5rem;
+      .room-card {
+        pointer-events: none;
+        background-color: rgb(226, 226, 226);
+      }
+    }
+    .room-card {
+      background-color: gray;
+      margin: .5rem;
+      border-radius: .25rem;
+      padding: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: .3s;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:hover {
+        background-color: rgb(226, 226, 226);
+      }
+    }
+  }
+}
